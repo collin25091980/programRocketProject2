@@ -1,6 +1,3 @@
-<?php
-   session_start();
-?>
 <!DOCTYPE html>
 <html lang="fr">
    <head>
@@ -52,6 +49,16 @@
                         <li class="nav-item">
                            <a href="/" class="nav-link me-lg-3">Accueil</a>
                         </li>
+                        <?php 
+                           if(!empty($_SESSION) && $_SESSION['role'] == 'admin') {
+                        ?> 
+                        <li class="nav-item">
+                           <a href="/#testimonials" class="nav-link me-lg-3">Gestion des projets</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="/#testimonials" class="nav-link me-lg-3">Gestion des avis</a>
+                        </li>
+                        <?php } ?>
                         <li class="nav-item">
                            <a href="/#about" class="nav-link me-lg-3">A propos</a>
                         </li>
@@ -61,9 +68,19 @@
                         <li class="nav-item">
                            <a href="/#testimonials" class="nav-link me-lg-3">Avis</a>
                         </li>
+                        <?php 
+                           if(!empty($_SESSION) && $_SESSION['role'] == 'user') {
+                        ?> 
+                           <li class="nav-item">
+                           <a href="/#testimonials" class="nav-link me-lg-3">Ajouter un avis</a>
+                        </li>
+                        <?php } ?>
                         <li class="nav-item">
                            <a href="/#contact" class="nav-link me-lg-3">Contact</a>
                         </li>
+                        <?php 
+                           if(empty($_SESSION)) {
+                        ?>   
                         <li class="nav-item">
                            <a href="login.php" class="nav-link me-lg-3">Se connecter</a>
                            </a>
@@ -71,6 +88,15 @@
                         <li class="nav-item">
                            <a href="signup.php" class="nav-link me-lg-3">S'inscrire</a>
                         </li>
+                        <?php   }
+                        else { ?>
+                           <li class="nav-item">
+                              <a href="#" class="nav-link me-lg-3">Bonjour, <?= $_SESSION['firstName'] ?></a>
+                           </li>
+                           <li class="nav-item">
+                              <a href="logout.php" class="nav-link me-lg-3">Se déconnecter</a>
+                           </li>
+                        <?php } ?>
                      </ul>
                   </div>
                </div>

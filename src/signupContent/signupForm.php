@@ -52,6 +52,14 @@
                     </div>
                   </div>
 
+                  <div class="d-flex justify-content-around align-items-center mb-4">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="auto" name="auto" checked />
+                              <label class="form-check-label" for="auto"> Se souvenir de moi </label>
+                        </div>
+                  </div>
+
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <button type="button" class="btn btn-primary btn-lg">S'inscrire</button>
                   </div>
