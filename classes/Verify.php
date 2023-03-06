@@ -17,15 +17,22 @@
          }
       }
 
-      public static function emailAndPasswordMatch($email, $password) {
+      public static function passwordGivenByEmailInDatabase($email) {
          require('src/connection.php');
-         $req = $bdd->prepare('SELECT password FROM users WHERE email = ? AND password = ?');
-         $req->execute([$email, $password]);
+         $req = $bdd->prepare('SELECT * FROM users WHERE email = ?');
+         $req->execute([$email]);
 
          while($result = $req->fetch()) {
             return $result['password'];
          }
       }
 
-   }
+      public static function imageSizeIsCorrect($image) {
+         return $image['size'] <= 3000000;
+      }
 
+      public static function imageExtensionIsCorrect($extensionImage, $extensionArray) {
+         return (in_array($extensionImage, $extensionArray));
+      }
+
+   }

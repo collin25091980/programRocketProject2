@@ -5,4 +5,5 @@
    require_once('classes/Security.php');
    require_once('classes/User.php');
    require_once('classes/Session.php');
-
+   require_once('classes/Testimonial.php');
+   require_once('classes/Project.php');

@@ -53,10 +53,10 @@
                            if(!empty($_SESSION) && $_SESSION['role'] == 'admin') {
                         ?> 
                         <li class="nav-item">
-                           <a href="/#testimonials" class="nav-link me-lg-3">Gestion des projets</a>
+                           <a href="/#testimonials" class="nav-link me-lg-3">Gestion projets</a>
                         </li>
                         <li class="nav-item">
-                           <a href="/#testimonials" class="nav-link me-lg-3">Gestion des avis</a>
+                           <a href="/#testimonials" class="nav-link me-lg-3">Gestion avis</a>
                         </li>
                         <?php } ?>
                         <li class="nav-item">
@@ -65,6 +65,13 @@
                         <li class="nav-item">
                            <a href="/#projects" class="nav-link me-lg-3">Projets</a>
                         </li>
+                        <?php 
+                           if(!empty($_SESSION) && $_SESSION['role'] == 'admin') {
+                        ?> 
+                        <li class="nav-item">
+                           <a href="projects.php" class="nav-link me-lg-3">Ajouter un projet</a>
+                        </li>
+                        <?php } ?>
                         <li class="nav-item">
                            <a href="/#testimonials" class="nav-link me-lg-3">Avis</a>
                         </li>
@@ -72,7 +79,7 @@
                            if(!empty($_SESSION) && $_SESSION['role'] == 'user') {
                         ?> 
                            <li class="nav-item">
-                           <a href="/#testimonials" class="nav-link me-lg-3">Ajouter un avis</a>
+                           <a href="testimonials.php" class="nav-link me-lg-3">Ajouter un avis</a>
                         </li>
                         <?php } ?>
                         <li class="nav-item">

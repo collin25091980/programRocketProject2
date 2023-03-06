@@ -5,4 +5,10 @@
          return $password;
       }
 
+      public static function createSecret($email) {
+         $secret = sha1($email) . time();
+         $secret = sha1($secret) .time();
+         return $secret;
+      }
+
    }

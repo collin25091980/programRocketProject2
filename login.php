@@ -11,15 +11,15 @@
          exit();
       }
 
-      if(Verify::emailInDatabase($email) == false) {
+      if(!Verify::emailInDatabase($email)) {
          header('location: login.php?error=true&message=Impossible de vous authentifier correctement.');
          exit();
       }
       
       $password = Security::encryptPassword($password);
-      
-      if(Verify::emailAndPasswordMatch($email, $password) == $password) {
-         header('location: login.php?error=true&message="Impossible de vous authentifier correctement pwd.');
+      echo 'password encrypté' . $password;
+      if(Verify::passwordGivenByEmailInDatabase($email) != $password) {
+         header('location: login.php?error=true&message=Impossible de vous authentifier correctement.');
          exit();
       }
       
@@ -32,3 +32,6 @@
    include('src/loginContent/loginForm.php');
    include('src/footer.php');
 ?>
+
+
+

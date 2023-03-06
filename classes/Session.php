@@ -11,6 +11,7 @@
             $_SESSION['firstName']  = $result['first_name'];
             $_SESSION['lastName']   = $result['last_name'];
             $_SESSION['role']       = $result['role'];
+            $_SESSION['userId']     = $result['id'];
 
             // if user has check "Se souvenir de moi" we create cookie
             if(isset($_POST['auto'])) {
