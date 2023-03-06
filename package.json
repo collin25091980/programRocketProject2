@@ -1,0 +1,22 @@
+{
+  "name": "htdocs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collin25091980/programRocketProject2.git"
+  },
+  "author": "Sebastien Collin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/collin25091980/programRocketProject2/issues"
+  },
+  "homepage": "https://github.com/collin25091980/programRocketProject2#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}

@@ -15,11 +15,17 @@
       <!-- Leaflet CSS -->
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
 
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap CSS
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="design/default.css">
 
       <!-- Custom CSS -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="design/style.css">
+
+   
+
 
    </head>  
    <body>
