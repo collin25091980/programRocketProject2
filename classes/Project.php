@@ -83,4 +83,26 @@
          <?php }
       }
 
+      public static function displayAllProjects() {
+         require('src/connection.php');
+         $req = $bdd->prepare('SELECT * FROM projects');
+         $req->execute();
+
+         while($result = $req->fetch()) { ?>
+            <tr>
+               <td><?= $result['id'] ?></td>
+               <td><img src="<?= $result['image_link'] ?>" alt="Projet <?= $result['id'] ?>" width="50" height="50" ></td>
+               <td><?=$result['title']?></td>
+               <td><?= $result['description']?></td>
+               <td>
+                  <div class="d-grid gap-2">
+                  <a href="updateProject.php?id=<?= $result['id']?>" onclick="return confirm('Êtes vous sur de vouloir modifier ce projet ?');" type="button" class="btn btn-warning">Modifier</a><span> </span>
+                  <a href="deleteProject.php?id=<?= $result['id']?>" onclick="return confirm('Êtes vous sur de vouloir supprimer ce projet ?');" type="button" class="btn btn-danger">Supprimer</a>
+                  </div>
+               </td>
+            </tr>
+         <?php }
+      }
+
+
    }

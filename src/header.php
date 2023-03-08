@@ -54,7 +54,7 @@
                            if(!empty($_SESSION) && $_SESSION['role'] == 'admin') {
                         ?> 
                         <li class="nav-item">
-                           <a href="/#testimonials" class="nav-link me-lg-3">Gestion projets</a>
+                           <a href="/projectsList.php" class="nav-link me-lg-3">Gestion projets</a>
                         </li>
                         <li class="nav-item">
                            <a href="testimonialsList.php" class="nav-link me-lg-3">Gestion avis</a>
