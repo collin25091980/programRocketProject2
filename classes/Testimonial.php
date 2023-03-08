@@ -54,4 +54,26 @@
                   '</div>';
          }
       }
+
+      public static function displayAllTestimonials() {
+         require('src/connection.php');
+         $req = $bdd->prepare('SELECT testimonials.id, testimonials.content, users.first_name, users.last_name FROM testimonials, users WHERE testimonials.user_id = users.id ');
+         $req->execute();
+
+         while($result = $req->fetch()) { ?>
+            <tr>
+               <td><?= $result['id'] ?></td>
+               <td><?= $result['content'] ?></td>
+               <td><?= $result['first_name']?> <?= $result['last_name'] ?></td>
+               <td><a href="deleteTestimonial.php?id=<?= $result['id']?>" onclick="return confirm('Êtes vous sur de vouloir supprimer cet avis ?');" type="button" class="btn btn-danger">Supprimer</a></td>
+            </tr>
+         <?php }
+      }
+
+      public static function deleteTestimonial($id) {
+         require('src/connection.php');
+         $req = $bdd->prepare('DELETE FROM testimonials WHERE id = ?');
+         $req->execute([$id]);
+      }
+      
    }

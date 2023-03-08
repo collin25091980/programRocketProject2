@@ -15,9 +15,6 @@
       <!-- Leaflet CSS -->
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
 
-      <!-- Bootstrap CSS
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-
       <!-- Bootstrap -->
       <link rel="stylesheet" href="design/default.css">
 
@@ -25,8 +22,6 @@
       <link rel="stylesheet" href="design/style.css">
 
    
-
-
    </head>  
    <body>
       <div class="container-fluid mx-0">
@@ -62,7 +57,7 @@
                            <a href="/#testimonials" class="nav-link me-lg-3">Gestion projets</a>
                         </li>
                         <li class="nav-item">
-                           <a href="/#testimonials" class="nav-link me-lg-3">Gestion avis</a>
+                           <a href="testimonialsList.php" class="nav-link me-lg-3">Gestion avis</a>
                         </li>
                         <?php } ?>
                         <li class="nav-item">

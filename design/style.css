@@ -30,3 +30,8 @@ body {
    height: 300px;
 }
 
+.form-check-input:checked {
+   background-color: #643AD7;
+   border-color: #643AD7;
+}
+
