@@ -46,6 +46,19 @@
          $req->execute([$this->getTitle(), $this->getDescription(), $this->getImageLink()]);
       }
 
+
+      public function updateProjectInDataBase($id) {
+         require('src/connection.php');
+         $req =  $bdd->prepare('UPDATE projects SET title = :title, description = :description, image_link = :image_link WHERE id = :id');
+         $req->execute([
+            'title' => $this->getTitle(),
+            'description' => $this->getDescription(),
+            'image_link' => $this->getImageLink(),
+            'id' => $id
+         ]);
+
+      }
+
       // Statics
 
       public static function displayProjects() {
@@ -104,5 +117,9 @@
          <?php }
       }
 
-
+      public static function deleteProject($id) {
+         require('src/connection.php');
+         $req = $bdd->prepare('DELETE FROM projects WHERE id = ?');
+         $req->execute([$id]);
+      }
    }

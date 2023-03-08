@@ -1,7 +1,7 @@
       <hr>
    </main>
       <!-- Footer -->
-      <footer class="sticky-bottom bg-light mt-auto text-center py-1">
+      <footer class="fixed-bottom bg-light mt-auto text-center py-1">
          <div class="container px-5">
             Copyright &copy; 2023 Sébastien Collin
          </div>.
