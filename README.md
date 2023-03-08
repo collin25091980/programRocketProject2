@@ -19,3 +19,5 @@ J'espère que vous aurez autant de plaisir à le tester que j'ai eu à le faire.
 Cordialement
 
 Sebastien Collin
+
+P.S : pour contourner le problème du header(location) sur le serveur j'ai utilisé ob_start() au début de chaque page qui en avait besoin.

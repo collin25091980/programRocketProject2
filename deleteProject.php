@@ -7,5 +7,5 @@
 
    Project::deleteProject($id);
    header('location: projectsList.php?success=true&message=Le projet a bien été supprimé');
-   exit();
+   ob_end_flush();
 ?>

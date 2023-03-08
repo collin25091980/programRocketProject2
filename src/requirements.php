@@ -1,4 +1,5 @@
 <?php
+   ob_start();
    session_start();
    require_once('options.php');
    require_once('classes/Verify.php');

@@ -17,7 +17,6 @@
       }
       
       $password = Security::encryptPassword($password);
-      echo 'password encrypté' . $password;
       if(Verify::passwordGivenByEmailInDatabase($email) != $password) {
          header('location: login.php?error=true&message=Impossible de vous authentifier correctement.');
          exit();
@@ -26,6 +25,7 @@
       Session::createSession($email);
       header('location: index.php');
       exit();
+      
    }
 
    include('src/header.php');

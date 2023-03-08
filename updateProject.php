@@ -35,7 +35,7 @@
       // Save Project in dataBase
       $project->updateProjectInDataBase($id);
       header('location: projectsList.php?success=true&message=Votre projet a bien été modifié');
-      exit();      
+      exit();
    }
 
 

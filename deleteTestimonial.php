@@ -7,5 +7,5 @@
 
    Testimonial::deleteTestimonial($id);
    header('location: testimonialsList.php?success=true&message=L\'avis a bien été supprimé');
-   exit();
+   ob_end_flush();
 ?>

@@ -31,6 +31,7 @@
       
       // Secret Creation
       $secret = Security::createSecret($email);
+      
 
       // Create User
       $user = new User($firstName, $lastName, $password, $email, $secret);
@@ -40,7 +41,7 @@
 
       // Create Session
       Session::createSession($email);
-      header('location: index.php');
+      header('location: https://projet2.sebastien-collin.fr/index.php');
       exit();
 
    }

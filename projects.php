@@ -34,7 +34,7 @@
       // Save Project in dataBase
       $project->saveProjectInDataBase();
       header('location: projects.php?success=true');
-      exit();      
+      exit();
    }
 
 

@@ -1,5 +1,7 @@
 
 <?php
+   ob_start();
+   session_start();
    if(isset($_COOKIE['auth']) && !isset($_SESSION['connect'])) {
       // Connexion à la bdd
       require('src/connection.php');
